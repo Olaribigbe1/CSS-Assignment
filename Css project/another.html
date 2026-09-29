@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibrahim Saheed | Software Developer & Computer Science Student</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#FF5722',
+            brandDark: '#E64A19',
+            darkBg: '#0A0A0C',
+            cardBg: '#141418',
+            cardBorder: '#242428',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .glow-orange:hover {
+      box-shadow: 0 0 25px rgba(255, 87, 34, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased selection:bg-brand selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- NAVIGATION BAR -->
+  <header class="w-full border-b border-cardBorder bg-darkBg/80 backdrop-blur-md sticky top-0 z-50 px-6 md:px-16 py-4 flex items-center justify-between">
+    <div class="text-xl font-extrabold tracking-wider">
+      IBRAHIM SAHEED<span class="text-brand">.</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-neutral-400 font-medium">
+      <a href="#about" class="hover:text-brand transition-colors">About</a>
+      <a href="#services" class="hover:text-brand transition-colors">Services</a>
+      <a href="#skills" class="hover:text-brand transition-colors">Skills</a>
+      <a href="#projects" class="hover:text-brand transition-colors">Projects</a>
+      <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <!-- CV DOWNLOAD BUTTON -->
+      <a href="Ibrahim_Saheed_CV.pdf" download="Ibrahim_Saheed_CV.pdf" class="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-cardBorder text-xs font-semibold px-4 py-2.5 rounded-xl transition-all flex items-center gap-2">
+        <svg class="w-4 h-4 fill-current text-brand" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+        <span>Download CV</span>
+      </a>
+      <a href="#contact" class="bg-brand hover:bg-brandDark text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-brand/20">
+        Let's Talk
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="w-full px-6 md:px-16 py-12 space-y-28">
+
+    <!-- HERO SECTION (No Photo, Text + Animated Terminal Code Box) -->
+    <section class="min-h-[75vh] flex flex-col md:flex-row items-center justify-between gap-12 w-full animate-fade-in">
+      <div class="w-full md:w-3/5 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-brand/10 border border-brand/30 text-brand text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span> KWASU 300L CS • Seeking SIWES Internship
+        </div>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+          Hi, I'm <span class="text-brand">Ibrahim Saheed</span>. Building Modern Web Interfaces.
+        </h1>
+        <p class="text-neutral-400 text-base md:text-xl max-w-2xl leading-relaxed">
+          Computer Science student at Kwara State University (KWASU). Specializing in full-stack web development, web application architectures, and clean UI/UX interactive designs.
+        </p>
+        <div class="pt-4 flex flex-wrap gap-4">
+          <a href="#projects" class="bg-brand hover:bg-brandDark text-white font-semibold px-8 py-4 rounded-2xl transition-all shadow-lg shadow-brand/25 hover:scale-105">
+            View My Projects
+          </a>
+          <a href="Ibrahim_Saheed_CV.pdf" download="Ibrahim_Saheed_CV.pdf" class="bg-cardBg hover:bg-neutral-800 text-neutral-200 font-semibold px-8 py-4 rounded-2xl border border-cardBorder transition-all hover:scale-105 flex items-center gap-2">
+            <span>Download Resume / CV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Animated Code Terminal Box -->
+      <div class="w-full md:w-2/5 flex justify-center">
+        <div class="w-full max-w-md bg-cardBg border border-cardBorder rounded-2xl p-5 shadow-2xl space-y-4 glow-orange">
+          <div class="flex items-center justify-between border-b border-cardBorder pb-3">
+            <div class="flex gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+            </div>
+            <span class="text-xs text-neutral-500 font-mono">developer.js</span>
+          </div>
+          <pre class="text-xs font-mono text-neutral-300 leading-relaxed overflow-x-auto">
+<span class="text-brand">const</span> developer = {
+  name: <span class="text-emerald-400">'Ibrahim Saheed'</span>,
+  role: <span class="text-emerald-400">'Full-Stack Web Dev'</span>,
+  university: <span class="text-emerald-400">'KWASU'</span>,
+  level: <span class="text-emerald-400">'300L (2nd Semester)'</span>,
+  status: <span class="text-emerald-400">'Ready for SIWES Placement'</span>,
+  skills: [<span class="text-emerald-400">'HTML'</span>, <span class="text-emerald-400">'CSS'</span>, <span class="text-emerald-400">'Tailwind'</span>, <span class="text-emerald-400">'JS'</span>, <span class="text-emerald-400">'React'</span>, <span class="text-emerald-400">'Redux'</span>]
+};
+</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="w-full bg-cardBg border border-cardBorder rounded-3xl p-8 md:p-14 glow-orange transition-all duration-300 space-y-6">
+      <div class="space-y-2">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest">About Me</h2>
+        <p class="text-3xl md:text-4xl font-extrabold">Who I Am</p>
+      </div>
+
+      <p class="text-neutral-300 text-base md:text-lg leading-relaxed max-w-4xl">
+        I am <span class="text-white font-semibold">Ibrahim Saheed</span>, a Computer Science student currently in the second semester of my 300-level at Kwara State University (KWASU). I am actively preparing for my upcoming 6-month <span class="text-brand font-medium">SIWES (Students Industrial Work Experience Scheme)</span> internship placement.
+      </p>
+
+      <!-- Academic & Career Info Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+        <div class="bg-darkBg border border-cardBorder p-5 rounded-2xl">
+          <span class="text-xs text-neutral-500 uppercase tracking-wider block">Full Name</span>
+          <span class="text-lg font-bold text-white mt-1 block">Ibrahim Saheed</span>
+        </div>
+        <div class="bg-darkBg border border-cardBorder p-5 rounded-2xl">
+          <span class="text-xs text-neutral-500 uppercase tracking-wider block">Institution</span>
+          <span class="text-lg font-bold text-white mt-1 block">KWASU</span>
+        </div>
+        <div class="bg-darkBg border border-cardBorder p-5 rounded-2xl">
+          <span class="text-xs text-neutral-500 uppercase tracking-wider block">Current Level</span>
+          <span class="text-lg font-bold text-white mt-1 block">300L (2nd Semester)</span>
+        </div>
+        <div class="bg-darkBg border border-cardBorder p-5 rounded-2xl">
+          <span class="text-xs text-neutral-500 uppercase tracking-wider block">Availability</span>
+          <span class="text-lg font-bold text-brand mt-1 block">SIWES Internship</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="space-y-8 w-full">
+      <div class="space-y-2">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest">What I Offer</h2>
+        <p class="text-3xl font-extrabold">Services</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-cardBg border border-cardBorder p-8 rounded-3xl space-y-4 hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center font-bold text-xl group-hover:bg-brand group-hover:text-white transition-colors">01</div>
+          <h3 class="font-bold text-xl group-hover:text-brand transition-colors">Frontend Web Development</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Building responsive, accessible web interfaces using HTML, Tailwind CSS, JavaScript, and React.
+          </p>
+        </div>
+
+        <div class="bg-cardBg border border-cardBorder p-8 rounded-3xl space-y-4 hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center font-bold text-xl group-hover:bg-brand group-hover:text-white transition-colors">02</div>
+          <h3 class="font-bold text-xl group-hover:text-brand transition-colors">UI/UX Design & Prototyping</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Creating user interface wireframes and interactive prototypes in Figma before converting them into production code.
+          </p>
+        </div>
+
+        <div class="bg-cardBg border border-cardBorder p-8 rounded-3xl space-y-4 hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center font-bold text-xl group-hover:bg-brand group-hover:text-white transition-colors">03</div>
+          <h3 class="font-bold text-xl group-hover:text-brand transition-colors">Progressive Web Apps (PWAs)</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Developing web apps equipped with offline capability, image compression, and mobile-first features.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & TECH STACK -->
+    <section id="skills" class="space-y-8 w-full">
+      <div class="space-y-2">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest">Capabilities</h2>
+        <p class="text-3xl font-extrabold">Skills & Tech Stack</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <!-- HTML5 -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center font-bold text-lg">HTML5</div>
+          <div><h3 class="font-bold text-sm">HTML5</h3><p class="text-neutral-500 text-[10px]">Markup</p></div>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center font-bold text-lg">CSS3</div>
+          <div><h3 class="font-bold text-sm">CSS3</h3><p class="text-neutral-500 text-[10px]">Styling</p></div>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold text-lg">TW</div>
+          <div><h3 class="font-bold text-sm">Tailwind</h3><p class="text-neutral-500 text-[10px]">Framework</p></div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center font-bold text-lg">JS</div>
+          <div><h3 class="font-bold text-sm">JavaScript</h3><p class="text-neutral-500 text-[10px]">ES6+ Logic</p></div>
+        </div>
+
+        <!-- React -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-lg">REACT</div>
+          <div><h3 class="font-bold text-sm">React</h3><p class="text-neutral-500 text-[10px]">UI Library</p></div>
+        </div>
+
+        <!-- Redux -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-lg">RDX</div>
+          <div><h3 class="font-bold text-sm">Redux</h3><p class="text-neutral-500 text-[10px]">State Mgt</p></div>
+        </div>
+
+        <!-- Figma -->
+        <div class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center font-bold text-lg">FIG</div>
+          <div><h3 class="font-bold text-sm">Figma</h3><p class="text-neutral-500 text-[10px]">UI/UX Design</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="space-y-8 w-full">
+      <div class="space-y-2">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest">Portfolio</h2>
+        <p class="text-3xl font-extrabold">Featured Work</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-cardBg border border-cardBorder rounded-3xl p-6 space-y-4 hover:border-brand/50 transition-all flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-xl font-bold">Opeyemi Liquid Soap</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Responsive e-commerce web interface with customized liquid soap product displays and dynamic layout.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">HTML</span>
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">Tailwind</span>
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-cardBg border border-cardBorder rounded-3xl p-6 space-y-4 hover:border-brand/50 transition-all flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-xl font-bold">My Wardrobe PWA</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Custom Progressive Web Application with client-side image compression and integrated WhatsApp sharing.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">PWA</span>
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">JS</span>
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">Tailwind</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-cardBg border border-cardBorder rounded-3xl p-6 space-y-4 hover:border-brand/50 transition-all flex flex-col justify-between">
+          <div class="space-y-2">
+            <h3 class="text-xl font-bold">UI/UX Figma Prototype</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Interactive interface designs and prototype systems developed in Figma prior to production implementation.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">Figma</span>
+            <span class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder text-neutral-300">UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="bg-cardBg border border-cardBorder rounded-3xl p-8 md:p-14 w-full glow-orange">
+      <div class="max-w-3xl mx-auto space-y-8">
+        <div class="text-center space-y-2">
+          <h2 class="text-xs font-bold text-brand uppercase tracking-widest">Get In Touch</h2>
+          <p class="text-3xl md:text-4xl font-extrabold">Send Ibrahim Saheed a Message</p>
+          <p class="text-neutral-400 text-sm">
+            Interested in hiring me for a SIWES placement or freelance web project? Send a message below!
+          </p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully!');" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-xs font-medium text-neutral-300 uppercase tracking-wider">Your Name</label>
+              <input type="text" placeholder="Enter your name" required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand transition-colors">
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs font-medium text-neutral-300 uppercase tracking-wider">Your Email</label>
+              <input type="email" placeholder="Enter your email" required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand transition-colors">
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-neutral-300 uppercase tracking-wider">Subject</label>
+            <input type="text" placeholder="SIWES Internship / Project Opportunity" required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand transition-colors">
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-xs font-medium text-neutral-300 uppercase tracking-wider">Message</label>
+            <textarea rows="5" placeholder="Write your message here..." required class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand transition-colors resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-brand hover:bg-brandDark text-white font-semibold py-4 rounded-xl transition-all shadow-lg shadow-brand/25 hover:scale-[1.01]">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-cardBorder px-6 md:px-16 py-6 text-center text-neutral-500 text-xs">
+    © 2026 Ibrahim Saheed. All rights reserved. Built with HTML & Tailwind CSS.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,909 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Saheed | Frontend Developer</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#FF5722',
+            brandDark: '#E64A19',
+            darkBg: '#0D0D0D',
+            cardBg: '#161618',
+            cardBorder: '#26262A',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .glow-orange:hover {
+      box-shadow: 0 0 25px rgba(255, 87, 34, 0.2);
+    }
+  </style>
+</head>
+
+
+<body
+  class="bg-darkBg text-white font-sans antialiased selection:bg-brand selection:text-white min-h-screen">
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header
+    class="w-full border-b border-cardBorder bg-darkBg/80 backdrop-blur-md sticky top-0 z-50">
+
+    <div
+      class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="text-xl font-extrabold tracking-wider">
+        SAHEED<span class="text-brand">.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-neutral-400 font-medium">
+
+        <a href="#about" class="hover:text-brand transition-colors">
+          About
+        </a>
+
+        <a href="#services" class="hover:text-brand transition-colors">
+          Services
+        </a>
+
+        <a href="#skills" class="hover:text-brand transition-colors">
+          Skills
+        </a>
+
+        <a href="#projects" class="hover:text-brand transition-colors">
+          Projects
+        </a>
+
+        <a href="#contact" class="hover:text-brand transition-colors">
+          Contact
+        </a>
+
+      </nav>
+
+      <!-- CTA -->
+      <a
+        href="#contact"
+        class="bg-brand hover:bg-brandDark text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-brand/20">
+        Let's Talk
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main class="max-w-7xl mx-auto px-6 md:px-10 py-16 space-y-28">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+      class="min-h-[75vh] flex flex-col md:flex-row items-center justify-between gap-12 animate-fade-in">
+
+      <!-- Hero Text -->
+
+      <div class="w-full md:w-3/5 space-y-6">
+
+        <div
+          class="inline-flex items-center gap-2 bg-brand/10 border border-brand/30 text-brand text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+
+          <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+
+          Available for Projects & Opportunities
+
+        </div>
+
+
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+
+          Building
+          <span class="text-brand">
+            Modern & Responsive
+          </span>
+          Websites.
+
+        </h1>
+
+
+        <p class="text-neutral-400 text-base md:text-xl max-w-2xl leading-relaxed">
+
+          I'm a Computer Science student and aspiring frontend developer
+          passionate about creating clean, responsive and user-friendly
+          websites.
+
+        </p>
+
+
+        <div class="pt-4 flex flex-wrap gap-4">
+
+          <a
+            href="#projects"
+            class="bg-brand hover:bg-brandDark text-white font-semibold px-8 py-4 rounded-2xl transition-all shadow-lg shadow-brand/25 hover:scale-105">
+
+            View My Projects
+
+          </a>
+
+
+          <a
+            href="#contact"
+            class="bg-cardBg hover:bg-neutral-800 text-neutral-200 font-semibold px-8 py-4 rounded-2xl border border-cardBorder transition-all hover:scale-105">
+
+            Contact Me
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Hero Image -->
+
+      <div class="w-full md:w-2/5 flex justify-center">
+
+        <div
+          class="relative w-full max-w-md aspect-square bg-cardBg border border-cardBorder rounded-3xl p-4 glow-orange transition-all duration-500 overflow-hidden group">
+
+          <!-- Replace this with your real picture -->
+
+          <img
+            src="https://via.placeholder.com/500"
+            alt="Saheed Ibrahim"
+            class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500">
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      id="about"
+      class="bg-cardBg border border-cardBorder rounded-3xl p-8 md:p-14 glow-orange">
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Image -->
+
+        <div
+          class="lg:col-span-5 aspect-square bg-darkBg rounded-2xl overflow-hidden border border-cardBorder">
+
+          <img
+            src="https://via.placeholder.com/600"
+            alt="About Saheed"
+            class="w-full h-full object-cover">
+
+        </div>
+
+
+        <!-- Content -->
+
+        <div class="lg:col-span-7 space-y-6">
+
+          <div class="space-y-2">
+
+            <h2
+              class="text-xs font-bold text-brand uppercase tracking-widest">
+
+              Biography
+
+            </h2>
+
+            <p class="text-3xl md:text-4xl font-extrabold">
+              About Me
+            </p>
+
+          </div>
+
+
+          <p class="text-neutral-300 text-base leading-relaxed">
+
+            Hello! I'm
+            <span class="text-white font-semibold">
+              Saheed Ibrahim
+            </span>,
+            a Computer Science student at Kwara State University (KWASU).
+
+            I'm currently developing my skills in frontend web development,
+            with a focus on creating responsive and user-friendly websites.
+
+          </p>
+
+
+          <p class="text-neutral-400 text-sm leading-relaxed">
+
+            I enjoy turning ideas and designs into functional websites
+            using HTML, CSS, Tailwind CSS and JavaScript. I'm continuously
+            learning and improving my development skills by building
+            practical projects.
+
+          </p>
+
+
+          <!-- Personal Info -->
+
+          <div class="pt-2 flex flex-wrap gap-8 text-sm">
+
+            <div>
+              <span
+                class="block text-neutral-500 text-xs uppercase tracking-wider">
+                Name
+              </span>
+
+              <span class="font-semibold text-white">
+                Saheed Ibrahim
+              </span>
+            </div>
+
+
+            <div>
+              <span
+                class="block text-neutral-500 text-xs uppercase tracking-wider">
+                Institution
+              </span>
+
+              <span class="font-semibold text-white">
+                KWASU
+              </span>
+            </div>
+
+
+            <div>
+              <span
+                class="block text-neutral-500 text-xs uppercase tracking-wider">
+                Course
+              </span>
+
+              <span class="font-semibold text-white">
+                Computer Science
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="space-y-8">
+
+      <div class="space-y-2">
+
+        <h2
+          class="text-xs font-bold text-brand uppercase tracking-widest">
+          What I Offer
+        </h2>
+
+        <p class="text-3xl font-extrabold">
+          Services
+        </p>
+
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+        <!-- Service 1 -->
+
+        <div
+          class="bg-cardBg border border-cardBorder p-8 rounded-3xl space-y-4 hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center font-bold text-xl group-hover:bg-brand group-hover:text-white transition-colors">
+
+            01
+
+          </div>
+
+          <h3 class="font-bold text-xl group-hover:text-brand">
+            Frontend Development
+          </h3>
+
+          <p class="text-neutral-400 text-sm leading-relaxed">
+
+            Creating responsive websites using HTML, CSS, Tailwind CSS
+            and JavaScript.
+
+          </p>
+
+        </div>
+
+
+        <!-- Service 2 -->
+
+        <div
+          class="bg-cardBg border border-cardBorder p-8 rounded-3xl space-y-4 hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center font-bold text-xl group-hover:bg-brand group-hover:text-white transition-colors">
+
+            02
+
+          </div>
+
+          <h3 class="font-bold text-xl group-hover:text-brand">
+            UI Design & Prototyping
+          </h3>
+
+          <p class="text-neutral-400 text-sm leading-relaxed">
+
+            Creating simple and clean user interfaces and prototypes
+            using Figma.
+
+          </p>
+
+        </div>
+
+
+        <!-- Service 3 -->
+
+        <div
+          class="bg-cardBg border border-cardBorder p-8 rounded-3xl space-y-4 hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center font-bold text-xl group-hover:bg-brand group-hover:text-white transition-colors">
+
+            03
+
+          </div>
+
+          <h3 class="font-bold text-xl group-hover:text-brand">
+            Responsive Web Design
+          </h3>
+
+          <p class="text-neutral-400 text-sm leading-relaxed">
+
+            Building websites that adapt properly to phones, tablets,
+            laptops and desktop screens.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills" class="space-y-8">
+
+      <div class="space-y-2">
+
+        <h2
+          class="text-xs font-bold text-brand uppercase tracking-widest">
+          Capabilities
+        </h2>
+
+        <p class="text-3xl font-extrabold">
+          Skills & Tech Stack
+        </p>
+
+      </div>
+
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+
+
+        <!-- HTML CSS -->
+
+        <div
+          class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">
+
+            &lt;/&gt;
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-base group-hover:text-brand">
+              HTML / CSS
+            </h3>
+
+            <p class="text-neutral-500 text-xs mt-1">
+              Web Structure & Styling
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Tailwind -->
+
+        <div
+          class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">
+
+            TW
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-base group-hover:text-brand">
+              Tailwind CSS
+            </h3>
+
+            <p class="text-neutral-500 text-xs mt-1">
+              Utility Classes
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- JavaScript -->
+
+        <div
+          class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">
+
+            JS
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-base group-hover:text-brand">
+              JavaScript
+            </h3>
+
+            <p class="text-neutral-500 text-xs mt-1">
+              Beginner / Learning
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Figma -->
+
+        <div
+          class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">
+
+            FG
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-base group-hover:text-brand">
+              Figma
+            </h3>
+
+            <p class="text-neutral-500 text-xs mt-1">
+              UI Design
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- PWA -->
+
+        <div
+          class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">
+
+            PW
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-base group-hover:text-brand">
+              PWA
+            </h3>
+
+            <p class="text-neutral-500 text-xs mt-1">
+              Progressive Web Apps
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Git -->
+
+        <div
+          class="aspect-square bg-cardBg border border-cardBorder rounded-2xl p-5 flex flex-col justify-between hover:border-brand/60 glow-orange transition-all group">
+
+          <div
+            class="w-10 h-10 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold text-lg">
+
+            GT
+
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-base group-hover:text-brand">
+              Git & GitHub
+            </h3>
+
+            <p class="text-neutral-500 text-xs mt-1">
+              Version Control
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="space-y-8">
+
+      <div class="space-y-2">
+
+        <h2
+          class="text-xs font-bold text-brand uppercase tracking-widest">
+          Portfolio
+        </h2>
+
+        <p class="text-3xl font-extrabold">
+          Featured Projects
+        </p>
+
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+        <!-- PROJECT 1 -->
+
+        <div
+          class="bg-cardBg border border-cardBorder rounded-3xl overflow-hidden group hover:border-brand/50 transition-all flex flex-col">
+
+          <div class="h-60 bg-neutral-800 overflow-hidden">
+
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="Opeyemi Liquid Soap website"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+
+          </div>
+
+
+          <div class="p-6 space-y-4 flex-grow">
+
+            <h3
+              class="text-xl font-bold group-hover:text-brand">
+              Opeyemi Liquid Soap
+            </h3>
+
+            <p class="text-neutral-400 text-sm leading-relaxed">
+
+              A responsive product website created to display
+              liquid soap products and provide a simple ordering experience.
+
+            </p>
+
+
+            <div class="flex flex-wrap gap-2 pt-2">
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                HTML
+              </span>
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                CSS
+              </span>
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                JavaScript
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div
+          class="bg-cardBg border border-cardBorder rounded-3xl overflow-hidden group hover:border-brand/50 transition-all flex flex-col">
+
+          <div class="h-60 bg-neutral-800 overflow-hidden">
+
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="My Wardrobe PWA"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+
+          </div>
+
+
+          <div class="p-6 space-y-4 flex-grow">
+
+            <h3
+              class="text-xl font-bold group-hover:text-brand">
+              My Wardrobe PWA
+            </h3>
+
+            <p class="text-neutral-400 text-sm leading-relaxed">
+
+              A wardrobe web application designed to display clothing
+              items and provide a simple mobile-friendly experience.
+
+            </p>
+
+
+            <div class="flex flex-wrap gap-2 pt-2">
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                HTML
+              </span>
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                CSS
+              </span>
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                JavaScript
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div
+          class="bg-cardBg border border-cardBorder rounded-3xl overflow-hidden group hover:border-brand/50 transition-all flex flex-col">
+
+          <div class="h-60 bg-neutral-800 overflow-hidden">
+
+            <img
+              src="https://via.placeholder.com/600x400"
+              alt="Portfolio website"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+
+          </div>
+
+
+          <div class="p-6 space-y-4 flex-grow">
+
+            <h3
+              class="text-xl font-bold group-hover:text-brand">
+              Personal Portfolio
+            </h3>
+
+            <p class="text-neutral-400 text-sm leading-relaxed">
+
+              A responsive personal portfolio website designed to
+              showcase my skills, projects and development journey.
+
+            </p>
+
+
+            <div class="flex flex-wrap gap-2 pt-2">
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                HTML
+              </span>
+
+              <span
+                class="text-xs bg-darkBg px-3 py-1 rounded-lg border border-cardBorder">
+                Tailwind CSS
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+      id="contact"
+      class="bg-cardBg border border-cardBorder rounded-3xl p-8 md:p-14">
+
+      <div class="max-w-3xl mx-auto space-y-8">
+
+        <div class="text-center space-y-2">
+
+          <h2
+            class="text-xs font-bold text-brand uppercase tracking-widest">
+            Get In Touch
+          </h2>
+
+          <p class="text-3xl md:text-4xl font-extrabold">
+            Send Me a Message
+          </p>
+
+          <p class="text-neutral-400 text-sm">
+
+            Have a project, opportunity or collaboration in mind?
+            Feel free to contact me.
+
+          </p>
+
+        </div>
+
+
+        <form
+          onsubmit="event.preventDefault(); alert('Thank you! Your message has been received.');"
+          class="space-y-6">
+
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="space-y-2">
+
+              <label class="text-xs font-medium text-neutral-300">
+                Your Name
+              </label>
+
+              <input
+                type="text"
+                placeholder="Enter your name"
+                required
+                class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand">
+
+            </div>
+
+
+            <div class="space-y-2">
+
+              <label class="text-xs font-medium text-neutral-300">
+                Your Email
+              </label>
+
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand">
+
+            </div>
+
+          </div>
+
+
+          <div class="space-y-2">
+
+            <label class="text-xs font-medium text-neutral-300">
+              Subject
+            </label>
+
+            <input
+              type="text"
+              placeholder="Project Inquiry / Opportunity"
+              required
+              class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand">
+
+          </div>
+
+
+          <div class="space-y-2">
+
+            <label class="text-xs font-medium text-neutral-300">
+              Message
+            </label>
+
+            <textarea
+              rows="5"
+              placeholder="Write your message here..."
+              required
+              class="w-full bg-darkBg border border-cardBorder rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand resize-none"></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="w-full bg-brand hover:bg-brandDark text-white font-semibold py-4 rounded-xl transition-all shadow-lg shadow-brand/25">
+
+            Send Message
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer
+    class="border-t border-cardBorder px-6 md:px-16 py-6 text-center text-neutral-500 text-xs">
+
+    © 2026 Saheed Ibrahim. Built with HTML & Tailwind CSS.
+
+  </footer>
+
+</body>
+</html>
+```
